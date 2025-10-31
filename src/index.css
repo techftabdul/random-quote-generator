@@ -9,7 +9,7 @@
 h1 {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .info {
@@ -17,7 +17,8 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-h3 {
+
+h2 {
   text-align: center;
 }
 
@@ -48,24 +49,25 @@ a {
   text-decoration: none;
   color: #fff;
   background-color: #007bff;
+  font-family: "Shadows Into Light", cursive;
 }
 
 a:hover {
   text-decoration: underline;
-  background-color: #fff;
-  color: #007bff;
+  color: #fff;
 }
 
 button {
   font-size: 20px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border: 1px solid #f48b0b;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
   font-family: "Roboto", sans-serif;
   background-color: #007bff;
   border: none;
   color: #fff;
+  font-family: "Shadows Into Light", cursive;
 }
 
 .fa-brands {
@@ -75,4 +77,9 @@ button {
 .btn {
   display: flex;
   justify-content: center;
+  font-family: "Shadows Into Light", cursive;
+}
+
+button:hover {
+  cursor: pointer;
 }

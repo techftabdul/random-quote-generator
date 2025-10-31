@@ -59,7 +59,7 @@ class RandomQuoteMachine extends React.Component {
   }
 
   componentDidMount() {
-    // this.fetchQuote()
+    this.fetchQuote();
     // this.fetchQuote();
   }
 
@@ -89,20 +89,20 @@ class RandomQuoteMachine extends React.Component {
         });
       })
       .catch((error) => {
-        console.log("using fallback quotes");
+        // console.log("using fallback quotes");
 
         const randomQuote =
           this.fallbackQuotes[
             Math.floor(Math.random() * this.fallbackQuotes.length)
           ];
 
-        this.setState({
+        this.setState((prevState) => ({
           quote: randomQuote.text,
           author: randomQuote.author,
           isLoading: false,
           error: "Offline mode - Using local quotes",
           quoteCount: prevState.quoteCount + 1,
-        });
+        }));
       });
   }
 
@@ -119,7 +119,7 @@ class RandomQuoteMachine extends React.Component {
         }}
       >
         <h1>💫 Daily Motivation</h1>
-        <h3
+        <h2
           style={{
             textAlign: "center",
             color: "#666",
@@ -128,7 +128,7 @@ class RandomQuoteMachine extends React.Component {
           }}
         >
           Quote #{this.state.quoteCount} • Get inspired every day!
-        </h3>
+        </h2>
         <div id="quote-box">
           <div id="text">
             <h1>{this.state.quote}</h1>
@@ -148,7 +148,7 @@ class RandomQuoteMachine extends React.Component {
                 )}`}
                 target="_blank"
               >
-                <i class="fa-brands fa-square-x-twitter"></i>
+                <i className="fa-brands fa-square-x-twitter"></i>
                 Tweet Quote
               </a>
             </button>
